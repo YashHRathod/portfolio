@@ -1,8 +1,11 @@
 {
   "name": "Yash Rathod",
   "version": "0.1.0",
-  "homepage": "https://sakshi01coder.github.io/React_portfolio",
+  "homepage": "https://yash01coder.github.io/React_portfolio",
   "private": true,
+   "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.11.0",
