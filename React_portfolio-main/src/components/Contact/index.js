@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react'
 import styled from 'styled-components'
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
@@ -123,28 +123,23 @@ const ContactButton = styled.input`
 
 
 const Contact = () => {
-  const [open, setOpen] = useState(false);
-  const form = useRef();
 
-  useEffect(() => {
-    // 🔐 Initialize EmailJS with your public API key
-    emailjs.init('FMIighIdIaTWYG9uh'); // get it from EmailJS Dashboard :contentReference[oaicite:1]{index=1}
-  }, []);
+  //hooks
+  const [open, setOpen] = React.useState(false);
+  const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        'service_wee8e17',     // ← your Service ID
-        'template_fwlb52r',    // ← your Template ID
-        form.current,
-      )
-      .then(() => {
+    emailjs.sendForm('service_wee8e17', 'template_fwlb52r', form.current, 'FMIighIdIaTWYG9uh')
+      .then((result) => {
         setOpen(true);
         form.current.reset();
-      })
-      .catch((error) => console.error('Email send error:', error.text));
-  };
+      }, (error) => {
+        console.log(error.text);
+      });
+  }
+
+
 
   return (
     <Container>
@@ -162,13 +157,13 @@ const Contact = () => {
         <Snackbar
           open={open}
           autoHideDuration={6000}
-          onClose={() => setOpen(false)}
+          onClose={()=>setOpen(false)}
           message="Email sent successfully!"
           severity="success"
         />
       </Wrapper>
     </Container>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact
