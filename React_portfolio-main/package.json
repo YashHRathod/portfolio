@@ -1,7 +1,6 @@
 {
   "name": "Yash Rathod",
   "version": "0.1.0",
-  "homepage": "https://yash01coder.github.io/React_portfolio",
   "private": true,
   "engines": {
     "node": "18.x"
