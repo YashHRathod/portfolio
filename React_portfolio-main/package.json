@@ -2,6 +2,7 @@
   "name": "Yash Rathod",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/React_portfolio",
   "engines": {
     "node": "18.x"
   },
