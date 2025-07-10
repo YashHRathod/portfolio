@@ -209,8 +209,8 @@ export const skills = [
 export const experiences = [
   {
    id: 1,
-img: "https://upload.wikimedia.org/wikipedia/commons/3/39/IET_Logo.svg", // or replace with NHB Ball & Roller logo if available
-role: "Software Development Intern – Label Automation System",
+img: "\images.jpeg", // or replace with NHB Ball & Roller logo if available
+role: "Project Intern – Label Automation System",
 organization: "NHB Ball & Roller Ltd.",
 date: "January 2025 – May 2025",
 desc: "Developed a desktop application to automate inner‑carton label generation for Autoliv products, drastically reducing manual errors and cycle time. Worked closely with engineering and production teams in Bilimora to ensure output adhered to industrial labeling standards and real‑time workflow demands. Mentored by Bhavesh Captain, applied core software development practices to enhance manufacturing efficiency.",
@@ -226,8 +226,8 @@ skills: [
   },
   {
    id: 1,
-img: "https://niyatainfotech.com/ (logo)", // symbol shown above from Nitika Infotech
-role: "Machine Learning Intern – Sales Prediction Project",
+img: "https://media.licdn.com/dms/image/v2/C560BAQHEpgGwRZZhNQ/company-logo_200_200/company-logo_200_200/0/1648097691323?e=1757548800&v=beta&t=mqVvSNhjskj-F-WGlTGaXhQmLqe5v2Lhj7Bv6Nl5huY", // symbol shown above from Nitika Infotech
+role: "Project Intern – Sales Prediction Project",
 organization: "Nitika Infotech",
 date: "May 2025 – July 2025",
 desc: "Built a sales prediction system using the Apriori association algorithm to identify product pairs frequently bought together. Performed market basket analysis via association rule mining to drive strategic product placement and boost cross‑selling. End‑to‑end data preprocessing, rule generation, and visualization conducted in Python using Pandas and MLxtend, yielding actionable insights for business stakeholders.",

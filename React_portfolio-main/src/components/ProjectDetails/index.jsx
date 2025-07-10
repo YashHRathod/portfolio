@@ -1,6 +1,6 @@
 import { CloseRounded } from '@mui/icons-material';
 import { Modal } from '@mui/material';
-import React from 'react';
+import {React,useRef,useEffect} from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -64,8 +64,25 @@ const Desc = styled.div`
         margin: 6px 6px;
     }
 `;
+const LinkButton = styled.a`
+    // top: 2px;
+    margin-top: auto;
+    align-self: flex-start;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: ${({ theme }) => theme.white};
+    background-color: ${({ theme }) => theme.primary};
+    padding: 8px 16px;
+    border-radius: 6px;
 
+    transition: all 0.3s ease;
+    &:hover {
+        opacity: 0.9;
+    }
+`;
 const Image = styled.img`
+    height: 287px;
     width: 100%;
     object-fit: cover;
     border-radius: 12px;
@@ -107,13 +124,27 @@ const Tag = styled.div`
 `;
 
 
-
-const index = ({ openModal, setOpenModal }) => {
+const Index = ({ openModal, setOpenModal }) => {
     const project = openModal?.project;
+    const wrapperRef = useRef();
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+                setOpenModal({ state: false, project: null });
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [setOpenModal]);
+
     return (
         <Modal open={true} onClose={() => setOpenModal({ state: false, project: null })}>
             <Container>
-                <Wrapper>
+                <Wrapper ref={wrapperRef}>
                     <CloseRounded
                         style={{
                             position: "absolute",
@@ -127,16 +158,24 @@ const index = ({ openModal, setOpenModal }) => {
                     <Title>{project?.title}</Title>
                     <Date>{project.date}</Date>
                     <Tags>
-                        {project?.tags.map((tag) => (
-                            <Tag>{tag}</Tag>
+                        {project?.tags.map((tag, index) => (
+                            <Tag key={index}>{tag}</Tag>
                         ))}
                     </Tags>
                     <Desc>{project?.description}</Desc>
+                    {project.github && (
+                        <LinkButton
+                            href={project.github}
+                            target="_blank"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            View Code
+                        </LinkButton>
+                    )}
                 </Wrapper>
             </Container>
-
         </Modal>
-    )
-}
+    );
+};
 
-export default index
+export default Index;
