@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Card = styled.div`
     width: 330px;
-    height: 490px;
+    height: 500px;
     background-color: ${({ theme }) => theme.card};
     cursor: pointer;
     border-radius: 10px;
@@ -23,7 +23,7 @@ const Card = styled.div`
 
 const Image = styled.img`
     width: 100%;
-    height: 180px;
+    height: 160px;
     background-color: ${({ theme }) => theme.white};
     border-radius: 10px;
     box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
@@ -46,6 +46,23 @@ const Tag = styled.span`
     padding: 2px 8px;
     border-radius: 10px;
 `
+const LinkButton = styled.a`
+    // top: 2px;
+    margin-top: auto;
+    align-self: flex-start;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: ${({ theme }) => theme.white};
+    background-color: ${({ theme }) => theme.primary};
+    padding: 8px 16px;
+    border-radius: 6px;
+
+    transition: all 0.3s ease;
+    &:hover {
+        opacity: 0.9;
+    }
+`;
 
 const Details = styled.div`
     width: 100%;
@@ -88,6 +105,8 @@ const Description = styled.div`
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
+    flex-grow: 1;
+
 `
 
 const Members = styled.div`
@@ -109,7 +128,7 @@ const Avatar = styled.img`
 const ProjectCards = ({ project, setOpenModal }) => {
     return (
         <Card onClick={() => setOpenModal({ state: true, project: project })}>
-            <Image src={project.image} alt={project.title}/>
+            <Image src={project.image} alt={project.title} />
             <Tags>
                 {project.tags?.map((tag, index) => (
                     <Tag key={index}>{tag}</Tag>
@@ -120,11 +139,25 @@ const ProjectCards = ({ project, setOpenModal }) => {
                 <Date>{project.date}</Date>
                 <Description>{project.description}</Description>
             </Details>
-            <Members>
+
+            {project.github && (
+                <LinkButton
+                    href={project.github}
+                    target="_blank"
+                    onClick={(e) => e.stopPropagation()}
+                >
+                    View Code
+                </LinkButton>
+            )}
+            
+
+            {/* <Members>
                 {project.member?.map((member, index) => (
-                    <Avatar key={index} src={member.img} alt={member.name}/>
+                    <Avatar key={index} src={member.img} alt={member.name} />
                 ))}
-            </Members>
+            </Members> */}
+
+
         </Card>
     )
 }

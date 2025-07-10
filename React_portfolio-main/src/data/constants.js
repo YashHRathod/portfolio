@@ -9,7 +9,7 @@ export const Bio = {
     "B.Tech student in ICT at DA‑IICT with hands‑on experience in full stack development and foundational exposure to machine learning and real‑time applications. Passionate about learning new technologies and building meaningful solutions.",
   github: "https://github.com/YashHRathod",
   resume:
-    "https://drive.google.com/file/d/1hvh4b4ssqOepT7Cyo8uFh2QZEbkEXDPS/view?usp=sharing",
+    "https://drive.google.com/file/d/1pR0z6LVxzpSP7jyQ_QiVIb-qSMSz8YAK/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/yash-rathod-0b5177265/",
 };
 
@@ -288,9 +288,10 @@ export const projects = [
     date: "2024 – 2025",
     description:
       "Led backend development, creating RESTful APIs using Node.js and MongoDB to support video streaming, quizzes, offline learning, and discussion forums. Collaborated with React.js frontend for seamless UX enabling course creation, content delivery, and performance tracking.",
-    image: ("https://img.freepik.com/free-psd/social-media-element-flat-design_23-2151921627.jpg?semt=ais_hybrid&w=740"), // replace with actual screenshot
+    image: ("/learnit.png"), // replace with actual screenshot
     tags: ["React.js", "Node.js", "MongoDB", "Tailwind CSS", "REST API"],
     category: "web app",
+    github: "https://github.com/YashHRathod/LearnIt---Online-Learning-Portal_yashclone",
   },
   {
     id: 2,
@@ -298,9 +299,10 @@ export const projects = [
     date: "2023 – 2024",
     description:
       "Engineered a secure, low-latency chat application using Socket.IO, enabling individual and group messaging, typing indicators, and active user status. Implemented user authentication and end-to-end encrypted message storage in PostgreSQL. Designed responsive UI with React.js and Chakra UI.",
-    image: ("https://img.freepik.com/free-psd/social-media-element-flat-design_23-2151921627.jpg?semt=ais_hybrid&w=740"), 
+    image: ("/Chat_App.jpg"), // replace with your screenshot
     tags: ["React.js", "Node.js", "Express.js", "Socket.IO", "Chakra UI", "PostgreSQL"],
     category: "web app",
+    github: "https://github.com/YashHRathod/Chat-App",
   },
   {
     id: 3,
@@ -308,9 +310,10 @@ export const projects = [
     date: "2025",
     description:
       "Created modular user stories using SOLID principles and prioritized via MoSCoW. Developed a local LLM pipeline with Ollama and LangChain to automate story generation and refinement. Evaluated output using the RUST framework to ensure clarity, specificity, and technical soundness.",
-    image:("https://img.freepik.com/free-psd/social-media-element-flat-design_23-2151921627.jpg?semt=ais_hybrid&w=740"), 
+    image:("/ThinkSpecImg.jpeg.jpg"), // replace with your screenshot
     tags: ["Ollama", "LangChain", "SOLID", "MoSCoW", "RUST"],
     category: "LLM",
+    github: "https://github.com/YashHRathod/ThinkSpec",
   },
    {
     id: 7,
@@ -318,9 +321,10 @@ export const projects = [
     date: "Jun 2024 – Jul 2024",
     description:
       "Built an IRCTC‑inspired train ticket booking portal featuring secure user authentication, ticket booking and cancellation, and PostgreSQL-powered data management to ensure reliability and data integrity.",
-    image: ("https://img.freepik.com/free-psd/social-media-element-flat-design_23-2151921627.jpg?semt=ais_hybrid&w=740"), // replace with your screenshot
+    image: ("/Train.png"), // replace with your screenshot
     tags: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Authentication"],
     category: "web app",
+    github: "https://github.com/YashHRathod/WoC6.0-react-IRCTC-clone-YashRathod",
     
   },
   {
@@ -329,9 +333,10 @@ export const projects = [
     date: "Apr 2025",
     description:
       "Conducted research using Agentless v1.5.0 to automatically fix bugs from SWE‑bench Lite issues without human intervention. Implemented the full cycle—reproduction test, patch generation, regression validation—and achieved tool‑benchmarking insights into LLM‑driven software maintenance.",
-    image: ("https://img.freepik.com/free-psd/social-media-element-flat-design_23-2151921627.jpg?semt=ais_hybrid&w=740"), // replace if available
+    image: "/agentless.png",
     tags: ["Agentless", "SWE‑bench Lite", "Python", "LLM", "Research"],
     category: "research",
+    github: "https://github.com/YashHRathod/Agentless",
     
   },
   {
@@ -340,9 +345,10 @@ export const projects = [
   date: "2025",
   description:
     "Built a binary image classifier to detect whether a person is wearing a wedding ring using webcam input. Collected ~279 labeled hand images (ring/no ring), extracted features via VGG16 transfer learning, and trained a logistic regression model for high-accuracy classification.",
-  image: ("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"), // add screenshot or demo GIF
+  image: ("/image.png"), // add screenshot or demo GIF
   tags: ["Python", "OpenCV", "Keras", "Scikit‑learn", "Transfer Learning", "Logistic Regression"],
   category: "computer vision",
+  github: "https://github.com/YashHRathod/wedding_photo_organizer"
   
 }
 
